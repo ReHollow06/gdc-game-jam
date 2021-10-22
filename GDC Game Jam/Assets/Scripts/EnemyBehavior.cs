@@ -17,10 +17,10 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "city")
+        if (collision.gameObject.tag == "shield")
         {
             Debug.Log("Collided");
-            Destroy(city);
+            Destroy(gameObject);
         }
     }
 

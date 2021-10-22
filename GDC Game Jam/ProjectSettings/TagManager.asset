@@ -6,6 +6,8 @@ TagManager:
   tags:
   - city
   - enemy
+  - shield attack
+  - shield
   layers:
   - Default
   - TransparentFX
