@@ -7,8 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isMoving;
     private Vector3 currentPos, targetPos;
     [SerializeField] private float moveTime = 0.05f;
-    [SerializeField] private bool atEdge;
-    [SerializeField] private int maxDistance = 4;
+    [SerializeField] private int maxDistance = 3;
 
 
     void Start()
@@ -25,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (transform.position.y < maxDistance)
             {
-                StartCoroutine(MovePlayer(Vector3.up * 4));
+                StartCoroutine(MovePlayer(new Vector3(0, maxDistance, 0)));
             }
                 
         }
@@ -34,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (transform.position.y > -maxDistance)
             {
-                StartCoroutine(MovePlayer(Vector3.down * 4));
+                StartCoroutine(MovePlayer(new Vector3(0, -maxDistance, 0)));
             }
             
         }

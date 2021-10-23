@@ -6,19 +6,30 @@ public class PlayerAttack : MonoBehaviour
 {
 
     [SerializeField] private GameObject shield;
+    [SerializeField] private float attackTime;
+
+    private void Start()
+    {
+        shield.tag = "shield";
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            shield.tag = "shield attack";
+            StartCoroutine(ShieldAttack());
         }
-        else
-        {
-            shield.tag = "shield";
-        }
-
 
     }
+
+    IEnumerator ShieldAttack()
+    {
+        shield.tag = "shield attack";
+
+        yield return new WaitForSeconds(attackTime);
+        
+        shield.tag = "shield";
+    }
+
 }
