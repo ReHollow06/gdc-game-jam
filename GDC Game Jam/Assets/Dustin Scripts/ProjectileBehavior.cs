@@ -5,7 +5,9 @@ using UnityEngine;
 public class ProjectileBehavior : MonoBehaviour
 {
     [SerializeField] private float velocity = 1f;
-    [SerializeField] Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject kamikazePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,19 @@ public class ProjectileBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "enemy")
+        {
+            Destroy(gameObject);
+
+            Vector2 currentPos = transform.position;
+
+            GameObject newKamikaze = Instantiate(kamikazePrefab);
+
+            newKamikaze.transform.position = currentPos;
+
+        }
+
 
     }
 }

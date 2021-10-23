@@ -5,14 +5,17 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]GameObject city;
+
+    [SerializeField] private float velocity = 1f;
+    [SerializeField] private Rigidbody2D rbody;
 
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        rbody.velocity = new Vector2(velocity * -1, rbody.velocity.y);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -22,6 +25,12 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Collided");
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "projectile")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 }
