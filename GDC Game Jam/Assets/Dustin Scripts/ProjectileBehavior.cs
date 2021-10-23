@@ -27,7 +27,7 @@ public class ProjectileBehavior : MonoBehaviour
 
         {
             Destroy(gameObject);
-            Score.scoreValue += 1;
+            _score.IncrementScore(1);
         }
 
         if (collision.gameObject.tag == "city")
