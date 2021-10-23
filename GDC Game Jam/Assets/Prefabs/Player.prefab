@@ -262,7 +262,7 @@ MonoBehaviour:
   isMoving: 0
   moveTime: 0.05
   atEdge: 0
-  maxDistance: 4
+  maxDistance: 3
 --- !u!114 &8586128567655234075
 MonoBehaviour:
   m_ObjectHideFlags: 0

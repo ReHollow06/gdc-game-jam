@@ -11,7 +11,7 @@ public class CityBehavior : MonoBehaviour
     {
         if(collision.gameObject.tag == "enemy")
         {
-            Destroy(gameObject);    
+            Debug.Log("hit by enemy");
         }
 
         if(collision.gameObject.tag == "enemy projectile")
