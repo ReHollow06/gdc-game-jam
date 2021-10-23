@@ -8,6 +8,7 @@ public class EnemyBehavior : MonoBehaviour
 
     [SerializeField] private float velocity = 1f;
     [SerializeField] private Rigidbody2D rbody;
+    [SerializeField] private Animator animator;
 
     public Score _score;
 
@@ -16,6 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         rbody.velocity = new Vector2(velocity * -1, rbody.velocity.y);
 
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,7 +25,8 @@ public class EnemyBehavior : MonoBehaviour
         if (collision.gameObject.tag == "shield attack")
         {
             Debug.Log("Collided");
-            Destroy(gameObject);
+            StartCoroutine(deathAnim(gameObject));
+ 
             _score.IncrementScore(2);
         }
 
@@ -34,9 +37,26 @@ public class EnemyBehavior : MonoBehaviour
 
         if (collision.gameObject.tag == "city")
         {
-            Destroy(gameObject);
+            StartCoroutine(explsnAnim(gameObject));
+
         }
 
+    }
+
+    IEnumerator deathAnim(GameObject gameObject)
+    {
+        animator.SetBool("isHitByShield", true);
+        Debug.Log("I ded");
+        FindObjectOfType<AudioManager>().Play("EnemyDeathByShield");
+        yield return new WaitForSeconds(0.4f);
+        Destroy(gameObject);
+    }
+    IEnumerator explsnAnim(GameObject gameObject)
+    {
+        animator.SetBool("IsTouchingCity", true);
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
+        yield return new WaitForSeconds(0.66f);
+        Destroy(gameObject);
     }
 
 }
