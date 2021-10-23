@@ -27,7 +27,7 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Collided");
             StartCoroutine(deathAnim(gameObject));
  
-            _score.IncrementScore(2);
+            Score.scoreValue += 20;
         }
 
         if (collision.gameObject.tag == "projectile")
