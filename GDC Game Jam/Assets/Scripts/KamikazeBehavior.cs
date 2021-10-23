@@ -6,6 +6,7 @@ public class KamikazeBehavior : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float velocity;
+    [SerializeField] private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +25,34 @@ public class KamikazeBehavior : MonoBehaviour
         if (collision.gameObject.tag == "city")
 
         {
-            Destroy(gameObject);
+            StartCoroutine(explsnAnim(gameObject));
+            
         }
 
         if (collision.gameObject.tag == "shield attack")
 
         {
-            Destroy(gameObject);
+            StartCoroutine(deathAnim(gameObject));
         }
 
 
     }
+
+    IEnumerator explsnAnim(GameObject gameObject)
+    {
+        animator.SetBool("IsTouchingCity", true);
+        Debug.Log("I boom");
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
+    }
+
+    IEnumerator deathAnim(GameObject gameObject)
+    {
+        animator.SetBool("IsHittingShield", true);
+        Debug.Log("I boom");
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
+    }
+
 
 }
