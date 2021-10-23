@@ -44,7 +44,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         while (true)
         {
-            int respawnTime = Random.Range(6,10);
+            int respawnTime = Random.Range(8,14);
             yield return new WaitForSeconds(respawnTime);
             SpawnNewEnemy();
         }
