@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 currentPos, targetPos;
     [SerializeField] private float moveTime = 0.05f;
     [SerializeField] private int maxDistance = 3;
+    [SerializeField] private Animator animator;
 
 
     void Start()
@@ -18,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
+        animator.SetBool("isMoving", false);
         if (Input.GetKeyDown("w") && !isMoving)
         {
             if (transform.position.y < maxDistance)
@@ -37,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
+
+
     }
 
 
@@ -54,10 +57,14 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = Vector3.Lerp(currentPos, targetPos, elapsedTime / moveTime);
             elapsedTime += Time.deltaTime;
+            animator.SetBool("isMoving", true);
+
             yield return null;
         }
 
         transform.position = targetPos;
+        animator.SetBool("isMoving", false);
+
         isMoving = false;
 
     }

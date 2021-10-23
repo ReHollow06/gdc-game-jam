@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private GameObject shield;
     [SerializeField] private float attackTime;
+    [SerializeField] private Animator animator;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             StartCoroutine(ShieldAttack());
+
         }
 
     }
@@ -26,9 +28,9 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator ShieldAttack()
     {
         shield.tag = "shield attack";
-
+        animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(attackTime);
-        
+        animator.SetBool("isAttacking", false);
         shield.tag = "shield";
     }
 
