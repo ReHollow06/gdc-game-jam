@@ -29,7 +29,7 @@ public class SpawnEnemy : MonoBehaviour
         GameObject newEnemy = Instantiate(enemyPrefab) as GameObject;
         int yRange = 3 * Random.Range(-1, 2);
 
-        newEnemy.transform.position = new Vector2(screenBounds.x, (1/2 * screenBounds.y) + yRange);
+        newEnemy.transform.position = new Vector2(screenBounds.x + 10, (1/2 * screenBounds.y) + yRange);
     }
 
     private void SpawnNewProjectile()
@@ -37,7 +37,7 @@ public class SpawnEnemy : MonoBehaviour
         GameObject newProjectile = Instantiate(projectilePrefab) as GameObject;
         int yRange = 3 * Random.Range(-1, 2);
 
-        newProjectile.transform.position = new Vector2(screenBounds.x, (1 / 2 * screenBounds.y) + yRange);
+        newProjectile.transform.position = new Vector2(screenBounds.x + 10, (1 / 2 * screenBounds.y) + yRange);
     }
 
     IEnumerator enemyWave()
