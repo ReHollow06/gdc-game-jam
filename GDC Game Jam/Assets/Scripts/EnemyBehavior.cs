@@ -25,8 +25,8 @@ public class EnemyBehavior : MonoBehaviour
         if (collision.gameObject.tag == "shield attack")
         {
             Debug.Log("Collided");
-            StartCoroutine(deathAnim());
-            Destroy(gameObject);
+            StartCoroutine(deathAnim(gameObject));
+ 
             _score.IncrementScore(2);
         }
 
@@ -37,23 +37,25 @@ public class EnemyBehavior : MonoBehaviour
 
         if (collision.gameObject.tag == "city")
         {
-            StartCoroutine(explsnAnim());
-            Destroy(gameObject);
+            StartCoroutine(explsnAnim(gameObject));
+
         }
 
     }
 
-    IEnumerator deathAnim()
+    IEnumerator deathAnim(GameObject gameObject)
     {
         animator.SetBool("isHitByShield", true);
         Debug.Log("I ded");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
+        Destroy(gameObject);
     }
-    IEnumerator explsnAnim()
+    IEnumerator explsnAnim(GameObject gameObject)
     {
-        animator.SetBool("isTouchingCity", true);
+        animator.SetBool("IsTouchingCity", true);
         Debug.Log("I boom");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.66f);
+        Destroy(gameObject);
     }
 
 }
