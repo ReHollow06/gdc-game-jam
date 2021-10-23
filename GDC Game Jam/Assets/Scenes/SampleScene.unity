@@ -2258,10 +2258,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Score: 0'
 --- !u!222 &1018429156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3305,6 +3305,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5354614348213910709, guid: def008bd008de064c92499a5b541ee08, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.78640246
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354614348213910709, guid: def008bd008de064c92499a5b541ee08, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1353713
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354614348213910709, guid: def008bd008de064c92499a5b541ee08, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2246
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354614348213910709, guid: def008bd008de064c92499a5b541ee08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.2913
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354614348213910709, guid: def008bd008de064c92499a5b541ee08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354614348213910714, guid: def008bd008de064c92499a5b541ee08, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89bd8a94d966d764c93ab0151230853d, type: 3}
     - target: {fileID: 5354614348316056584, guid: def008bd008de064c92499a5b541ee08, type: 3}
       propertyPath: m_RootOrder
       value: 3

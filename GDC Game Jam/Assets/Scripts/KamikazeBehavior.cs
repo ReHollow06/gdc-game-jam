@@ -54,6 +54,7 @@ public class KamikazeBehavior : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("EnemyDeathByShield");
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        Score.scoreValue += 30;
     }
 
 
