@@ -10,6 +10,7 @@ TagManager:
   - shield
   - spawners
   - projectile
+  - kamikaze
   layers:
   - Default
   - TransparentFX

@@ -24,10 +24,16 @@ public class CityBehavior : MonoBehaviour
             TakeDamage(50);
         }
 
-        if(collision.gameObject.tag == "enemy projectile")
+        if(collision.gameObject.tag == "projectile")
         {
             Debug.Log("hit by projectile");
             TakeDamage(25);
+        }
+
+        if (collision.gameObject.tag == "kamikaze")
+        {
+            Debug.Log("Hit by Kamikaze");
+            TakeDamage(100);
         }
     }
 
