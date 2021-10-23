@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CityBehavior : MonoBehaviour
 {
@@ -42,5 +43,13 @@ public class CityBehavior : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+
+    private void Update()
+    {
+        if (currentHealth == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

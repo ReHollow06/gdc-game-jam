@@ -9,7 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private float velocity = 1f;
     [SerializeField] private Rigidbody2D rbody;
 
-
+    public Score _score;
 
     // Update is called once per frame
     void Update()
@@ -24,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             Debug.Log("Collided");
             Destroy(gameObject);
+            _score.IncrementScore(2);
         }
 
         if (collision.gameObject.tag == "projectile")
