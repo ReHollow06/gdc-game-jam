@@ -7,17 +7,16 @@ public class CityBehavior : MonoBehaviour
     // Start is called before the first frame update
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "enemy")
         {
-            Debug.Log("Hit by enemy");
+            Destroy(gameObject);    
         }
 
-        if(collision.gameObject.tag == "EnemyProjectile")
+        if(collision.gameObject.tag == "enemy projectile")
         {
             Debug.Log("hit by projectile");
-            // needs to damage the city
         }
     }
 }
