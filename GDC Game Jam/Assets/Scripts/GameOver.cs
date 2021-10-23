@@ -20,11 +20,13 @@ public class GameOver : MonoBehaviour
 
     public void RestartGame()
     {
+        Score.scoreValue = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void QuitGame()
     {
+        Score.scoreValue = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }
