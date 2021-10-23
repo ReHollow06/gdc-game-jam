@@ -19,4 +19,21 @@ public class KamikazeBehavior : MonoBehaviour
         rb.velocity = new Vector2(velocity * -1, rb.velocity.y);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "city")
+
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "shield attack")
+
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
+
 }
