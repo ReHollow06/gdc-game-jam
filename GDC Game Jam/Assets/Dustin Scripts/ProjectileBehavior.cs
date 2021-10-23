@@ -20,7 +20,8 @@ public class ProjectileBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "shield")
+        if (collision.gameObject.tag == "shield" || collision.gameObject.tag == "shield attack")
+
         {
             Destroy(gameObject);
         }
