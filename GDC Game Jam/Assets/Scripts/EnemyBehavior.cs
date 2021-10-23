@@ -47,13 +47,14 @@ public class EnemyBehavior : MonoBehaviour
     {
         animator.SetBool("isHitByShield", true);
         Debug.Log("I ded");
+        FindObjectOfType<AudioManager>().Play("EnemyDeathByShield");
         yield return new WaitForSeconds(0.4f);
         Destroy(gameObject);
     }
     IEnumerator explsnAnim(GameObject gameObject)
     {
         animator.SetBool("IsTouchingCity", true);
-        Debug.Log("I boom");
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
         yield return new WaitForSeconds(0.66f);
         Destroy(gameObject);
     }

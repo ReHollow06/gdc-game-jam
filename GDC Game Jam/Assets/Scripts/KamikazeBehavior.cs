@@ -42,6 +42,7 @@ public class KamikazeBehavior : MonoBehaviour
     {
         animator.SetBool("IsTouchingCity", true);
         Debug.Log("I boom");
+        FindObjectOfType<AudioManager>().Play("ShieldBash");
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
