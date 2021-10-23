@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - shield attack
   - shield
+  - spawners
   layers:
   - Default
   - TransparentFX
