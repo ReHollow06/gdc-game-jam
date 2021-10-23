@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: shield
       objectReference: {fileID: 0}
+    - target: {fileID: 8757567354861230585, guid: 1de61c299d5f82f47b9b5d6f01c4efe3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f35255c5986b0d4697908ede44769fc, type: 3}
     - target: {fileID: 8757567354961339348, guid: 1de61c299d5f82f47b9b5d6f01c4efe3, type: 3}
       propertyPath: m_Name
       value: Player

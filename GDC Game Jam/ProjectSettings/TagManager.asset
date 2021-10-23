@@ -9,6 +9,7 @@ TagManager:
   - shield attack
   - shield
   - spawners
+  - projectile
   layers:
   - Default
   - TransparentFX
