@@ -42,7 +42,7 @@ public class KamikazeBehavior : MonoBehaviour
     {
         animator.SetBool("IsTouchingCity", true);
         Debug.Log("I boom");
-        FindObjectOfType<AudioManager>().Play("ShieldBash");
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
@@ -51,6 +51,7 @@ public class KamikazeBehavior : MonoBehaviour
     {
         animator.SetBool("IsHittingShield", true);
         Debug.Log("I boom");
+        FindObjectOfType<AudioManager>().Play("EnemyDeathByShield");
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
