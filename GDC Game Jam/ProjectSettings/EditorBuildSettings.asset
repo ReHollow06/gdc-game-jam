@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d38558adb2d61a24699659efec106c33
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DustinScene.unity
     guid: 67417509afd37c74faab360c8566b990
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: c0ed1d22b4d52494db2e77b1f49d3edc
+    path: Assets/Scenes/GameOver2.0.unity
+    guid: e7447144ac83b7047816ce6ff6f4244a
   m_configObjects: {}
