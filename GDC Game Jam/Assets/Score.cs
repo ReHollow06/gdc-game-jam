@@ -1,25 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public static int scoreValue = 0;
-    Text score;
-
-    private void Start()
+    private int tot_score;
+    public void IncrementScore(int points)
     {
-        score = GetComponent<Text>();
+        tot_score += points;
     }
-
-    private void Update()
+    public int GetScore()
     {
-        score.text = "Score: " + scoreValue;
-    }
-
-    private void OnDisable()
-    {
-        PlayerPrefs.SetInt("Score", scoreValue);
+        return tot_score;
     }
 }

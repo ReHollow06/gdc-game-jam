@@ -174,7 +174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4fb2c18e44f6048a734c4f4bcbe8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalScore: {fileID: 1306170799}
+  _score: {fileID: 700204127}
+  pointsText: {fileID: 1306170799}
 --- !u!114 &700204127
 MonoBehaviour:
   m_ObjectHideFlags: 0
