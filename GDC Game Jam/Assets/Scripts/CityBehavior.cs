@@ -47,7 +47,7 @@ public class CityBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
