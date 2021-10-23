@@ -2098,7 +2098,7 @@ MonoBehaviour:
     pitch: 0.1
     source: {fileID: 0}
   - name: EnemyDeathByShield
-    clip: {fileID: 8300000, guid: ff18ccebf94e29d48b826de340b19b4f, type: 3}
+    clip: {fileID: 8300000, guid: 792393e95fa45604f9d5d58cbd4daaa7, type: 3}
     volume: 1
     pitch: 0.1
     source: {fileID: 0}

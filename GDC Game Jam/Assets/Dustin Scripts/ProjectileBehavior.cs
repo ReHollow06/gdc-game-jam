@@ -7,6 +7,7 @@ public class ProjectileBehavior : MonoBehaviour
     [SerializeField] private float velocity = 1f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject kamikazePrefab;
+
     public Score _score;
 
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class ProjectileBehavior : MonoBehaviour
 
         if (collision.gameObject.tag == "city")
         {
+            FindObjectOfType<AudioManager>().Play("EnemyDeath");
             Destroy(gameObject);
         }
 
