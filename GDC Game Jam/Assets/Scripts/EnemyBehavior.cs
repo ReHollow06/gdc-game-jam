@@ -24,7 +24,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             Debug.Log("Collided");
             Destroy(gameObject);
-            _score.IncrementScore(2);
+            Score.scoreValue += 2;
         }
 
         if (collision.gameObject.tag == "projectile")

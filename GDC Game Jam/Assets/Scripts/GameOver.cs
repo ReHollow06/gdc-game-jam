@@ -6,11 +6,16 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public Score _score;
-    public Text pointsText;
+    int score = 0;
+    public Text finalScore;
     private void Start()
     {
-        pointsText.text = "Score: " + _score.GetScore();
+        score = PlayerPrefs.GetInt("Score");
+    }
+
+    private void Update()
+    {
+        finalScore.text = "Score: " + (int)score;
     }
     public void RestartGame()
     {
