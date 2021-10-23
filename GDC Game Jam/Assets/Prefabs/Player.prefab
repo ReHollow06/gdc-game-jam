@@ -264,6 +264,7 @@ MonoBehaviour:
   isMoving: 0
   moveTime: 0.05
   maxDistance: 3
+  animator: {fileID: 3390096035289241044}
 --- !u!114 &8586128567655234075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 8157482254213278135}
-  attackTime: 0.5
+  attackTime: 0.6
+  animator: {fileID: 3390096035289241044}
 --- !u!95 &3390096035289241044
 Animator:
   serializedVersion: 3
