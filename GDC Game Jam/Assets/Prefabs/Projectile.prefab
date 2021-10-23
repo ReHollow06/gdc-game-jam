@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5642309349976220983}
   - component: {fileID: 5642309349976220982}
   - component: {fileID: 3700431262043160601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: projectile
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5887795a1f3cf5a44b5c349d9e6ad191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 12
+  velocity: 16
   rb: {fileID: 5642309349976220983}
   kamikazePrefab: {fileID: 4666525283873757185, guid: 62d8b85ab57d539479bf44cdeb531899, type: 3}
 --- !u!61 &3700431262043160601
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5642309350258644663}
   - component: {fileID: 5642309350258644660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ProjectileSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

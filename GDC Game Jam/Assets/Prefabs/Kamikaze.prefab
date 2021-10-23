@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4666525283296437383}
   - component: {fileID: 4666525283296437380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 8163421810163263355}
   - component: {fileID: 8287586865711339908}
   - component: {fileID: 7200560066981960715}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Kamikaze
-  m_TagString: Untagged
+  m_TagString: kamikaze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

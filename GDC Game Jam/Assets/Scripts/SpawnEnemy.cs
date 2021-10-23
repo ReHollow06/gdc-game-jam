@@ -15,6 +15,7 @@ public class SpawnEnemy : MonoBehaviour
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(enemyWave());
         StartCoroutine(projectileWave());
+
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class SpawnEnemy : MonoBehaviour
     private void SpawnNewEnemy()
     {
         GameObject newEnemy = Instantiate(enemyPrefab) as GameObject;
-        int yRange = 3 * Random.Range(-1, 2);
+        int yRange = 3 * Random.Range(-1, 1);
 
         newEnemy.transform.position = new Vector2(screenBounds.x + 10, (1/2 * screenBounds.y) + yRange);
     }
@@ -35,7 +36,7 @@ public class SpawnEnemy : MonoBehaviour
     private void SpawnNewProjectile()
     {
         GameObject newProjectile = Instantiate(projectilePrefab) as GameObject;
-        int yRange = 3 * Random.Range(-1, 2);
+        int yRange = 3 * Random.Range(-1, 1);
 
         newProjectile.transform.position = new Vector2(screenBounds.x + 10, (1 / 2 * screenBounds.y) + yRange);
     }
@@ -54,7 +55,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         while (true)
         {
-            int respawnTime = Random.Range(1, 5);
+            float respawnTime = (float)(0.5 * Random.Range(1, 3));
             yield return new WaitForSeconds(respawnTime);
             SpawnNewProjectile();
 

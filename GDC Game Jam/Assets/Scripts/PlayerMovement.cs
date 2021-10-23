@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isMoving;
     private Vector3 currentPos, targetPos;
     [SerializeField] private float moveTime = 0.05f;
-    [SerializeField] private int maxDistance = 3;
+    [SerializeField] private int maxDistance = 2;
 
 
     void Start()
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown("w") && !isMoving)
         {
-            if (transform.position.y < maxDistance)
+            if (transform.position.y < 0)
             {
                 StartCoroutine(MovePlayer(new Vector3(0, maxDistance, 0)));
             }
