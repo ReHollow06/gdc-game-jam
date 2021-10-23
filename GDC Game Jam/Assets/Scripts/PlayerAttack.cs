@@ -29,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
     {
         shield.tag = "shield attack";
         animator.SetBool("isAttacking", true);
+        FindObjectOfType<AudioManager>().Play("ShieldThrow");
         yield return new WaitForSeconds(attackTime);
         animator.SetBool("isAttacking", false);
         shield.tag = "shield";
