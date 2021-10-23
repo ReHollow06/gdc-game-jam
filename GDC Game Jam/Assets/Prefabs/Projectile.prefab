@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5887795a1f3cf5a44b5c349d9e6ad191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 8
+  velocity: 12
   rb: {fileID: 5642309349976220983}
   kamikazePrefab: {fileID: 4666525283873757185, guid: 62d8b85ab57d539479bf44cdeb531899, type: 3}
 --- !u!61 &3700431262043160601
