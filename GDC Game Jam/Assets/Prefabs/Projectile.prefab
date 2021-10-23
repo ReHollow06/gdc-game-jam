@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5642309349976220977}
   - component: {fileID: 5642309349976220983}
   - component: {fileID: 5642309349976220982}
-  - component: {fileID: 3554347827899441175}
+  - component: {fileID: 3700431262043160601}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: projectile
@@ -69,8 +69,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 8
   rb: {fileID: 5642309349976220983}
---- !u!60 &3554347827899441175
-PolygonCollider2D:
+  kamikazePrefab: {fileID: 4666525283873757185, guid: 62d8b85ab57d539479bf44cdeb531899, type: 3}
+--- !u!61 &3700431262043160601
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,13 +93,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.0032993425, y: 0.26734823}
-      - {x: -0.51554805, y: 0.0013031662}
-      - {x: -0.3172421, y: -0.1056713}
-      - {x: -0.0011452287, y: -0.26159072}
-      - {x: 0.52874583, y: 0.0013033152}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5642309350258644661
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebfca6348dec22c4d976843916b70195, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
