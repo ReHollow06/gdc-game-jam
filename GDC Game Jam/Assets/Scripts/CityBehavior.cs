@@ -13,5 +13,10 @@ public class CityBehavior : MonoBehaviour
         {
             Destroy(gameObject);    
         }
+
+        if(collision.gameObject.tag == "enemy projectile")
+        {
+            Debug.Log("hit by projectile");
+        }
     }
 }
