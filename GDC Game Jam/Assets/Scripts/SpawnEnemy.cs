@@ -5,22 +5,23 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject projectilePrefab;
     private Vector2 screenBounds; 
-    //[SerializeField] private int timerLowBound = 6;
-    //[SerializeField] private int timerHighBound = 9;
 
     // Start is called before the first frame update
     void Start()
     {
+
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(enemyWave());
+        StartCoroutine(projectileWave());
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    
+        
     }
 
     private void SpawnNewEnemy()
@@ -31,6 +32,14 @@ public class SpawnEnemy : MonoBehaviour
         newEnemy.transform.position = new Vector2(screenBounds.x, (1/2 * screenBounds.y) + yRange);
     }
 
+    private void SpawnNewProjectile()
+    {
+        GameObject newProjectile = Instantiate(projectilePrefab) as GameObject;
+        int yRange = 3 * Random.Range(-1, 2);
+
+        newProjectile.transform.position = new Vector2(screenBounds.x, (1 / 2 * screenBounds.y) + yRange);
+    }
+
     IEnumerator enemyWave()
     {
         while (true)
@@ -39,5 +48,17 @@ public class SpawnEnemy : MonoBehaviour
             yield return new WaitForSeconds(respawnTime);
             SpawnNewEnemy();
         }
+    }
+
+    IEnumerator projectileWave()
+    {
+        while (true)
+        {
+            int respawnTime = Random.Range(1, 5);
+            yield return new WaitForSeconds(respawnTime);
+            SpawnNewProjectile();
+
+        }
+
     }
 }

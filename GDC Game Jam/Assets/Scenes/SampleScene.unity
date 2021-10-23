@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8152762759768164941, guid: 76104270005a5ac43ae31f91b2611b17, type: 3}
-  respawnTime: 1
+  projectilePrefab: {fileID: 5642309349976220981, guid: 06cd322db9127ee4481ba7f11a592f54, type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
