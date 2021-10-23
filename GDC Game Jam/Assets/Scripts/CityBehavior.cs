@@ -4,16 +4,7 @@ using UnityEngine;
 
 public class CityBehavior : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-    public int currentHealth;
-
-    public HealthBar healthBar;
-
-    private void Start()
-    {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-    }
+    // Start is called before the first frame update
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -21,20 +12,11 @@ public class CityBehavior : MonoBehaviour
         if(collision.gameObject.tag == "enemy")
         {
             Debug.Log("hit by enemy");
-            TakeDamage(50);
         }
 
         if(collision.gameObject.tag == "enemy projectile")
         {
             Debug.Log("hit by projectile");
-            TakeDamage(25);
         }
-    }
-
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
     }
 }
